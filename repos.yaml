@@ -21,6 +21,26 @@
       url: 'http://portsmon.freebsd.org/portoverview.py?category={category}&portname={name}'
   tags: [ all, have_testdata, demo, production, fastfetch ]
 
+- name: dports
+  desc: DPorts
+  family: freebsd
+  sources:
+    - name: INDEX
+      fetcher: File
+      parser: FreeBSDIndex
+      url: http://muscles.dragonflybsd.org/INDEX.bz2
+      compression: bz2
+  links:
+    - desc: FreshPorts page
+      url: 'http://www.freshports.org/{category}/{name}'
+    - desc: SVNWeb
+      url: 'https://svnweb.freebsd.org/ports/head/{category}/{name}/'
+    - desc: Port's Makefile
+      url: 'https://svnweb.freebsd.org/ports/head/{category}/{name}/Makefile?view=co'
+    - desc: PortsMon
+      url: 'http://portsmon.freebsd.org/portoverview.py?category={category}&portname={name}'
+  tags: [ all, have_testdata, demo, production, fastfetch ]
+
 - name: pkgsrc
   desc: pkgsrc
   family: pkgsrc
